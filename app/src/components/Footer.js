@@ -22,18 +22,23 @@ export default function Footer() {
 			<Box
 				sx={{
 					// bgcolor: "background.paper",
-					backgroundColor: "#0091ea",
+					backgroundColor: "#263238",
 					p: 6,
 				}}
 				component="footer"
 			>
-				<Typography variant="h6" align="center" gutterBottom>
+				<Typography
+					variant="h6"
+					align="center"
+					color="common.white"
+					gutterBottom
+				>
 					Roman Kutsel
 				</Typography>
 				<Typography
 					variant="subtitle1"
 					align="center"
-					color="text.secondary"
+					color="common.white"
 					component="p"
 				>
 					Social Media
