@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
+import { Link } from "@mui/material";
 import TextButton from "./TextButton";
 import HomeIcon from "./icons/HomeIcon";
 import FileIcon from "./icons/File";
@@ -41,21 +42,35 @@ export default function DividerStack() {
 								sx={{
 									display: "flex",
 									"& > :not(style)": {
-										// m: 1,
 										width: 40,
 										height: 39,
 									},
 								}}
 							>
 								<Paper variant="outlined" sx={{ mr: 2 }}>
-									<GithubIcon
-										sx={{ mt: 0.4, ml: 0.2, width: 35, height: 35 }}
-									/>
+									<Link
+										href="https://github.com/rkutsel"
+										color="inherit"
+										target="_blank"
+										rel="noreferrer"
+									>
+										{" "}
+										<GithubIcon
+											sx={{ mt: 0.4, ml: 0.2, width: 35, height: 35 }}
+										/>
+									</Link>
 								</Paper>
 								<Paper variant="outlined">
-									<LinkedInIcon
-										sx={{ mt: 0.4, ml: 0.2, width: 35, height: 35 }}
-									/>
+									<Link
+										href="https://www.linkedin.com/in/rkutsel"
+										color="inherit"
+										target="_blank"
+										rel="noreferrer"
+									>
+										<LinkedInIcon
+											sx={{ mt: 0.4, ml: 0.2, width: 35, height: 35 }}
+										/>
+									</Link>
 								</Paper>
 							</Box>
 						</Stack>
