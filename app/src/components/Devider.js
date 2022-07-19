@@ -4,6 +4,7 @@ import TextButton from "./TextButton";
 import HomeIcon from "./icons/HomeIcon";
 import FileIcon from "./icons/File";
 import InfoIcon from "./icons/Info";
+import CodeIcon from "./icons/Code";
 
 export default function DividerStack() {
 	return (
@@ -16,6 +17,7 @@ export default function DividerStack() {
 				<TextButton iconName={<HomeIcon />} btnText={"Home"} />
 				<TextButton iconName={<FileIcon />} btnText={"My Resume"} />
 				<TextButton iconName={<InfoIcon />} btnText={"About Me"} />
+				<TextButton iconName={<CodeIcon />} btnText={"My Projects"} />
 			</Stack>
 		</div>
 	);

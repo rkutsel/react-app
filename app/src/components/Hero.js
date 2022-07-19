@@ -46,8 +46,8 @@ export default function Hero() {
 									paragraph
 								>
 									Fullstack Web Developer and a proud Pacific North West
-									resident. This is my personal placeholder that I made for
-									myself in React.
+									resident. This is a placeholder for my mini React project that
+									I made for myself.
 								</Typography>
 								{/* <Stack
 							sx={{ pt: 4 }}

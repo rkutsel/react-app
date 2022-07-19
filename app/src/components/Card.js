@@ -1,11 +1,11 @@
-import Card from "@mui/material/Card";
+import Card from "@mui/joy/Card";
 import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
+import CardCover from "@mui/joy/CardCover";
+import CardContent from "@mui/joy/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
+import Typography from "@mui/joy/Typography";
 import Container from "@mui/material/Container";
-
 
 export default function CardElement({ cardElements }) {
 	return (
@@ -14,32 +14,24 @@ export default function CardElement({ cardElements }) {
 				<Grid container spacing={4}>
 					{cardElements.map((card) => (
 						<Grid item key={card} xs={12} sm={6} md={4}>
-							<Card
-								sx={{
-									height: "100%",
-									display: "flex",
-									flexDirection: "column",
-								}}
-							>
-								<CardMedia
-									component="img"
+							<Card sx={{ minHeight: "280px", minWidth: 290 }}>
+								<CardCover>
+									<img
+										src="https://images.unsplash.com/photo-1542773998-9325f0a098d7?crop=entropy&auto=format&fit=crop&w=3271"
+										alt=""
+									/>
+								</CardCover>
+								<CardCover
 									sx={{
-										// 16:9
-										pt: "56.25%",
+										background:
+											"linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
 									}}
-									image="https://source.unsplash.com/random"
-									alt="random"
 								/>
-								<CardContent sx={{ flexGrow: 1 }}>
-									<Typography gutterBottom variant="h5" component="h2">
-										Heading
-									</Typography>
-									<Typography>
-										This is a media card. You can use this section to describe
-										the content.
+								<CardContent sx={{ justifyContent: "flex-end" }}>
+									<Typography level="h2" fontSize="lg" textColor="#fff" mb={1}>
+										Yosemite National Park
 									</Typography>
 								</CardContent>
-								<CardActions></CardActions>
 							</Card>
 						</Grid>
 					))}
