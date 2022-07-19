@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
@@ -13,6 +14,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Paper from "@mui/material/Paper";
 
 export default function DividerStack() {
+	const [currentPage, setCurrentPage] = useState("");
+	const handlePageChange = (page) => setCurrentPage(page);
 	return (
 		<>
 			<Box sx={{ flexGrow: 1 }}>
@@ -23,10 +26,48 @@ export default function DividerStack() {
 							divider={<Divider orientation="vertical" flexItem />}
 							spacing={2}
 						>
-							<TextButton iconName={<HomeIcon />} btnText={"Home"} />
-							<TextButton iconName={<FileIcon />} btnText={"My Resume"} />
-							<TextButton iconName={<InfoIcon />} btnText={"About Me"} />
-							<TextButton iconName={<CodeIcon />} btnText={"My Projects"} />
+							<Link
+								href="/home"
+								onClick={() => {
+									handlePageChange("home");
+								}}
+								color="inherit"
+								underline={currentPage === "home" ? "always" : "none"}
+							>
+								<TextButton iconName={<HomeIcon />} btnText={"Home"} />
+							</Link>
+							<Link
+								href="https://drive.google.com/file/d/1oFvzDnWskRAsYIl9FKOiM0GXV6BzVCIB/view"
+								onClick={() => {
+									handlePageChange("resume");
+								}}
+								color="inherit"
+								target="_blank"
+								rel="noreferrer"
+								underline={currentPage === "resume" ? "always" : "none"}
+							>
+								<TextButton iconName={<FileIcon />} btnText={"My Resume"} />
+							</Link>
+							<Link
+								href="/about"
+								onClick={() => {
+									handlePageChange("about");
+								}}
+								color="inherit"
+								underline={currentPage === "about" ? "always" : "none"}
+							>
+								<TextButton iconName={<InfoIcon />} btnText={"About Me"} />
+							</Link>
+							<Link
+								href="/projects"
+								onClick={() => {
+									handlePageChange("projects");
+								}}
+								color="inherit"
+								underline={currentPage === "projects" ? "always" : "none"}
+							>
+								<TextButton iconName={<CodeIcon />} btnText={"My Projects"} />
+							</Link>
 						</Stack>
 					</Grid>
 					<Grid item xs={6}>
@@ -35,9 +76,6 @@ export default function DividerStack() {
 							justifyContent="flex-end"
 							alignItems="stretch"
 						>
-							{/* <Badge color="secondary" mt={4}>
-								<MailIcon color="success" />
-							</Badge> */}
 							<Box
 								sx={{
 									display: "flex",
@@ -54,7 +92,6 @@ export default function DividerStack() {
 										target="_blank"
 										rel="noreferrer"
 									>
-										{" "}
 										<GithubIcon
 											sx={{ mt: 0.4, ml: 0.2, width: 35, height: 35 }}
 										/>
