@@ -5,13 +5,8 @@ import Link from "@mui/material/Link";
 
 function Copyright() {
 	return (
-		<Typography variant="body2" color="text.secondary" align="center">
-			{"Copyright © "}
-			<Link color="inherit" href="">
-				Roman Kutsel
-			</Link>{" "}
+		<Typography variant="body2" color="common.white" align="center">
 			{new Date().getFullYear()}
-			{"."}
 		</Typography>
 	);
 }

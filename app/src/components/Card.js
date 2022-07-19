@@ -6,11 +6,11 @@ import Typography from "@mui/joy/Typography";
 import imgCover from "../assets/images/code.jpeg";
 import { Link } from "@mui/material";
 
-export default function CardElement({}) {
+export default function CardElement({ uriLink, tag }) {
 	return (
 		<>
 			<Grid item xs={12} sm={6} md={4}>
-				<Link href="#" color="inherit">
+				<Link href={uriLink} color="inherit" target="_blank" rel="noreferrer">
 					<Card
 						sx={{
 							minHeight: "280px",
@@ -29,7 +29,7 @@ export default function CardElement({}) {
 						/>
 						<CardContent sx={{ justifyContent: "flex-end" }}>
 							<Typography level="h2" fontSize="lg" textColor="#fff" mb={1}>
-								Yosemite National Park
+								{tag}
 							</Typography>
 						</CardContent>
 					</Card>
