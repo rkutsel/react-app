@@ -4,29 +4,22 @@ import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import Typography from "@mui/joy/Typography";
 import Container from "@mui/material/Container";
-import imgLocalExchange from "../assets/images/code.jpeg";
 
-export default function CardElement({ url, tag }) {
+export default function CardElement({ cardElements }) {
 	return (
 		<>
 			<Container sx={{ py: 8 }} maxWidth="md">
 				<Grid container spacing={4}>
-					<Grid item xs={12} sm={6} md={4}>
-						<Link href={url} color="inherit">
-							<Card
-								sx={{
-									minHeight: "280px",
-									minWidth: 280,
-									"&:hover": {
-										transform: "scale3d(1.01, 1.01, 0.1)",
-									},
-								}}
-							>
+					{cardElements.map((card) => (
+						<Grid item key={card} xs={12} sm={6} md={4}>
+							<Card sx={{ minHeight: "280px", minWidth: 290 }}>
 								<CardCover>
-									<img src={imgLocalExchange} alt="" />
+									<img
+										src="https://images.unsplash.com/photo-1542773998-9325f0a098d7?crop=entropy&auto=format&fit=crop&w=3271"
+										alt=""
+									/>
 								</CardCover>
 								<CardCover
 									sx={{
@@ -36,12 +29,12 @@ export default function CardElement({ url, tag }) {
 								/>
 								<CardContent sx={{ justifyContent: "flex-end" }}>
 									<Typography level="h2" fontSize="lg" textColor="#fff" mb={1}>
-										{tag}
+										Yosemite National Park
 									</Typography>
 								</CardContent>
 							</Card>
-						</Link>
-					</Grid>
+						</Grid>
+					))}
 				</Grid>
 			</Container>
 		</>

@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import avatar from "../avatar.jpeg";
 
@@ -44,9 +45,9 @@ export default function Hero() {
 									color="common.white"
 									paragraph
 								>
-									Fullstack Web Developer and a Pacific North West resident.
-									This is a placeholder for my mini React project that I made
-									for myself.
+									Fullstack Web Developer and a proud Pacific North West
+									resident. This is a placeholder for my mini React project that
+									I made for myself.
 								</Typography>
 								{/* <Stack
 							sx={{ pt: 4 }}
