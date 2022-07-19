@@ -27,7 +27,7 @@ export default function DividerStack() {
 							spacing={2}
 						>
 							<Link
-								href="/home"
+								href="/react-app/home"
 								onClick={() => {
 									handlePageChange("home");
 								}}
@@ -49,7 +49,7 @@ export default function DividerStack() {
 								<TextButton iconName={<FileIcon />} btnText={"My Resume"} />
 							</Link>
 							<Link
-								href="/about"
+								href="/react-app/about"
 								onClick={() => {
 									handlePageChange("about");
 								}}
@@ -59,7 +59,7 @@ export default function DividerStack() {
 								<TextButton iconName={<InfoIcon />} btnText={"About Me"} />
 							</Link>
 							<Link
-								href="/projects"
+								href="/react-app/projects"
 								onClick={() => {
 									handlePageChange("projects");
 								}}

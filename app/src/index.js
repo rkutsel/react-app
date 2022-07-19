@@ -2,19 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { App, About, Projects } from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
-				<Route path="/" element={<App />} />
-				<Route path="/home" element={<App />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/projects" element={<Projects />} />
+				<Route path="/react-app/" element={<App />} />
+				<Route path="/react-app/home" element={<App />} />
+				<Route path="/react-app/about" element={<About />} />
+				<Route path="/react-app/projects" element={<Projects />} />
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	</React.StrictMode>
 );
 reportWebVitals();
