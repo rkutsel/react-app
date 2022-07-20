@@ -47,7 +47,7 @@ export default function DividerStack() {
 								rel="noreferrer"
 								underline={currentPage === "resume" ? "always" : "none"}
 							>
-								<TextButton iconName={<FileIcon />} btnText={"My Resume"} />
+								<TextButton iconName={<FileIcon />} btnText={"Resume"} />
 							</Link>
 							<Link
 								to="/react-app/about"
@@ -58,7 +58,7 @@ export default function DividerStack() {
 								color="inherit"
 								underline={currentPage === "about" ? "always" : "none"}
 							>
-								<TextButton iconName={<InfoIcon />} btnText={"About Me"} />
+								<TextButton iconName={<InfoIcon />} btnText={"About"} />
 							</Link>
 							<Link
 								to="/react-app/projects"
@@ -69,7 +69,7 @@ export default function DividerStack() {
 								color="inherit"
 								underline={currentPage === "projects" ? "always" : "none"}
 							>
-								<TextButton iconName={<CodeIcon />} btnText={"My Projects"} />
+								<TextButton iconName={<CodeIcon />} btnText={"Projects"} />
 							</Link>
 						</Stack>
 					</Grid>
