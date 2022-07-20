@@ -7,12 +7,12 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<HashRouter>
+		<HashRouter basename="/">
 			<Routes>
-				<Route path="/react-app/" element={<App />} />
-				<Route path="/react-app/home" element={<App />} />
-				<Route path="/react-app/about" element={<About />} />
-				<Route path="/react-app/projects" element={<Projects />} />
+				<Route path="/" element={<App />} />
+				<Route path="/home" element={<App />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/projects" element={<Projects />} />
 			</Routes>
 		</HashRouter>
 	</React.StrictMode>
