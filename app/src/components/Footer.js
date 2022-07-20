@@ -32,9 +32,7 @@ export default function Footer() {
 					align="center"
 					color="common.white"
 					component="p"
-				>
-					Social Media
-				</Typography>
+				></Typography>
 				<Copyright />
 			</Box>
 		</>

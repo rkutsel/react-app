@@ -11,10 +11,6 @@ export default function Navbar() {
 						backgroundColor: "#0091ea",
 					}}
 				>
-					{/* <CameraIcon sx={{ mr: 2 }} /> */}
-					{/* <Typography variant="h6" color="inherit" noWrap>
-						Roman Kutsel
-					</Typography> */}
 					<DividerStack />
 				</Toolbar>
 			</AppBar>
