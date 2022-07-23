@@ -13,6 +13,10 @@ root.render(
 				<Route path="/home" element={<App />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/projects" element={<Projects />} />
+				<Route
+					path="*"
+					element={<h1 className="display-2">Page Not Found!</h1>}
+				/>
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>
